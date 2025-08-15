@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce Master</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <a href="/">
-        <img src="./assets/images/logo.svg" alt="logo inicio" />
-      </a>
-      <nav>
-        <ul>
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#sobre">Sobre</a>
-            </li>
-             <li>
-                <a href="#produtos">Produtos</a>
-            </li>
-            <li>
-                <a href="#perguntas">Perguntas Frequentes</a>
-            </li>
-            <li>
-                <a href="#fale">Fale Conosco</a>
-            </li>
-        </ul>
-      </nav>
-      
-      <button>
-        <img src="./assets/images/icone_carrinho.svg" alt="carrinho">
-      </button>
+        <a href="/">
+            <img src="./assets/images/logo.svg" alt="logo inicio" />
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#produtos">Produtos</a>
+                </li>
+                <li>
+                    <a href="#perguntas">Perguntas Frequentes</a>
+                </li>
+                <li>
+                    <a href="#fale">Fale Conosco</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button>
+            <img src="./assets/images/icone_carrinho.svg" alt="carrinho">
+        </button>
 
     </header>
 
@@ -71,7 +73,7 @@
 
     <footer>
         <nav>
-            <h3>Intitucional</h3>
+            <h3>Institucional</h3>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -81,7 +83,7 @@
             </ul>
         </nav>
         <nav>
-             <h3>Ajuda</h3>
+            <h3>Ajuda</h3>
             <ul>
                 <li><a href="#trocas">Trocas e Devoluções</a></li>
                 <li><a href="#termos">Termos e Condições</a></li>
@@ -90,7 +92,7 @@
             </ul>
         </nav>
         <nav>
-             <h3>Endereço</h3>
+            <h3>Endereço</h3>
             <ul>
                 <li><a href="#">Rua Avenida Brasil</a></li>
                 <li>São Francisco, Califórnia</a></li>
@@ -103,5 +105,66 @@
             <p>@2025 - Todos os direitos reservados</p>
         </div>
     </footer>
-  </body>
+    <div class="modal" id="modal-1" aria-hidden="true">
+
+        <div tabindex="-1" data-micromodal-close>
+
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+                <header>
+
+                    <h2 id="modal-1-title">Carrinho de compras</h2>
+
+                    <button aria-label="Close modal" data-micromodal-close></button>
+
+                </header>
+
+                <div id="modal-1-content">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/camiseta_roxa.jpg" alt="Camiseta roxa"></td>
+                                <td>Camiseta roxa</td>
+                                <td>R$89,90</td>
+                                <td><input type="number" value="1" min="1"> </td> 
+                                <td>R$ 89,90</td>
+                                <td><button id="deletar">Deletar</button></td> 
+                            </tr>
+                             <tr>
+                                <td><img src="./assets/images/caneca_devemdobro.jpg" alt="Caneca porcelana"></td>
+                                <td>Caneca porcelana</td>
+                                <td>R$29,90</td>
+                                <td><input type="number" value="1" min="1"> </td> 
+                                <td>R$ 29,90</td>
+                                <td><button id="deletar">Deletar</button></td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <span id="total-carinho">Total: R$0,00</span>
+                        <button>Finalizar Compra</button>            
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
+</body>
+
 </html>
